@@ -2,10 +2,6 @@
 #    path: /
 #    controller: App\Controller\DefaultController::index
 
-# this 'app_lucky_number' is intended for test only if nothing works in 'app_hello'
-app_lucky_number:
-    path: /lucky/number
-    controller: App\Controller\LuckyController::number
 
 app_hello:
   path: /
