@@ -21,7 +21,7 @@ class Controller
         $actionNone = 'none';
         $action1 = 'mouseButtonPressed';
 
-        // Get demanded action
+        // Get demanded action from user
         if ( isset($_GET[$actionString]) && !empty($_GET[$actionString]) )
         {
             $getAction = $_GET[$actionString];
