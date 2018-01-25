@@ -9,6 +9,6 @@ app_lucky_number:
 
 app_hello:
   path: /
-  controller: App\Controller\View::onLoadPage
+  controller: App\Controller\Controller::onPageLoad
   requirements:
           _method:  GET
