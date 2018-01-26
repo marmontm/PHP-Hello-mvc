@@ -12,7 +12,7 @@ class Controller
     public function __construct()
     {
         $this->myModel = new Model();
-        $this->myView = new View();
+        $this->myView = new View($this->myModel);
     }
 
     public function onPageLoad()
@@ -44,11 +44,8 @@ class Controller
                 break;
         }
 
-        // Get message from Model
-        $message = $this->myModel->getMessage();
-
-        // Ask View to render HTML including the message
-        $html = $this->myView->renderHtml($message);
+        // Ask View to render HTML
+        $html = $this->myView->renderHtml();
 
         // Return rendered HTML page
         return new Response($html);
