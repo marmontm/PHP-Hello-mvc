@@ -10,7 +10,7 @@ class View
 
     public function __construct()
     {
-        $this->htmlPart1 = '<html><body><a href="index.php?action=mouseButtonPressed">';
+        $this->htmlPart1 = '<html><head><title>HelloWorld MVC Demo</title></head><body><a href="index.php?action=mouseButtonPressed">';
         $this->htmlPart2 = '</a></body></html>';
     }
 
