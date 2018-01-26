@@ -5,13 +5,11 @@ namespace App\Controller;
 
 class Model
 {
-    private $defaultMessage;
     private $message;
 
     public function __construct()
     {
-        $this->defaultMessage = 'Hello World!';
-        $this->message = $this->defaultMessage;
+        $this->message = 'Hello World!';
     }
 
     /**
@@ -28,13 +26,5 @@ class Model
     public function setMessage(string $message): void
     {
         $this->message = $message;
-    }
-
-    /**
-     * @return string
-     */
-    public function getDefaultMessage(): string
-    {
-        return $this->defaultMessage;
     }
 }

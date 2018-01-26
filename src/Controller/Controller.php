@@ -31,23 +31,21 @@ class Controller
             $getAction = $actionNone;
         }
 
-        // Ask Model for string value (like message displayed)
+        // Update value in Model with respect to the demanded action
         switch ($getAction)
         {
             case $actionOnClick:
                 // set updated message in Model
                 $this->myModel->setMessage('Updated Hello World!');
-
-                // get updated message in Model
-                // (normally it's the same as sent just before)
-                $message = $this->myModel->getMessage();
                 break;
 
             default:
-                // get default message from Model
-                $message = $this->myModel->getDefaultMessage();
+                // do nothing
                 break;
         }
+
+        // Get message from Model
+        $message = $this->myModel->getMessage();
 
         // Ask View to render HTML including the message
         $html = $this->myView->renderHtml($message);
