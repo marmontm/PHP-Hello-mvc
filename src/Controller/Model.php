@@ -6,12 +6,28 @@ namespace App\Controller;
 class Model
 {
     private $defaultMessage;
-    private $onClickMessage;
+    private $message;
 
     public function __construct()
     {
         $this->defaultMessage = 'Hello World!';
-        $this->onClickMessage = 'Updated Hello World!';
+        $this->message = $this->defaultMessage;
+    }
+
+    /**
+     * @return string
+     */
+    public function getMessage(): string
+    {
+        return $this->message;
+    }
+
+    /**
+     * @param string $message
+     */
+    public function setMessage(string $message): void
+    {
+        $this->message = $message;
     }
 
     /**
@@ -20,13 +36,5 @@ class Model
     public function getDefaultMessage(): string
     {
         return $this->defaultMessage;
-    }
-
-    /**
-     * @return string
-     */
-    public function getOnClickMessage(): string
-    {
-        return $this->onClickMessage;
     }
 }

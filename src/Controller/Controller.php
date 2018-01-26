@@ -19,7 +19,7 @@ class Controller
     {
         $actionString = 'action';
         $actionNone = 'none';
-        $action1 = 'mouseButtonPressed';
+        $actionOnClick = 'mouseButtonPressed';
 
         // Get demanded action from user
         if ( isset($_GET[$actionString]) && !empty($_GET[$actionString]) )
@@ -34,11 +34,17 @@ class Controller
         // Ask Model for string value (like message displayed)
         switch ($getAction)
         {
-            case $action1:
-                $message = $this->myModel->getOnClickMessage();
+            case $actionOnClick:
+                // set updated message in Model
+                $this->myModel->setMessage('Updated Hello World!');
+
+                // get updated message in Model
+                // (normally it's the same as sent just before)
+                $message = $this->myModel->getMessage();
                 break;
 
             default:
+                // get default message from Model
                 $message = $this->myModel->getDefaultMessage();
                 break;
         }
