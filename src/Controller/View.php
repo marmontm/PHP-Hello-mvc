@@ -16,7 +16,7 @@ class View
         $this->htmlPart2 = '</a></body></html>';
     }
 
-    public function renderHtml() :string
+    public function renderHtml() : string
     {
         // Get value from Model
         $message = $this->myModel->getMessage();

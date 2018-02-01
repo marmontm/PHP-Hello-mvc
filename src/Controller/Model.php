@@ -15,7 +15,7 @@ class Model
     /**
      * @return string
      */
-    public function getMessage(): string
+    public function getMessage() : string
     {
         return $this->message;
     }
@@ -23,7 +23,7 @@ class Model
     /**
      * @param string $message
      */
-    public function setMessage(string $message): void
+    public function setMessage(string $message)
     {
         $this->message = $message;
     }
